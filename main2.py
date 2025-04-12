@@ -1,5 +1,3 @@
-
-
 #ASM -> BIM
 
 def assembler_to_binary(asm_code):
