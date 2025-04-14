@@ -62,6 +62,12 @@ def check_conversion(hex_input):
     print("\nBIN → ASM:")
     print(hex_result)
 
+#    if hex_input == hex_result:
+#        print("\n sovpadaet!")
+#    else:
+#        print("\n ne sovpadaet HEX.")
+
 #sbor
 hex_input = input(" Hex-code (ex: '00 00 00 00 01 01 01 01'):\n").replace(" ", "")
 check_conversion(hex_input)
+
