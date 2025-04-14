@@ -5,13 +5,13 @@ opcode_dict = {
     'NOP': '00', 'AJMP': '01', 'LJMP': '02', 'RR A': '03', 'INC A': '04',
     'DEC A': '14', 'ADD A,R0': '28', 'ADD A,R1': '29',
     'JC': '40', 'JZ': '60', 'JNZ': '70', 'SJMP': '80',
-    'MUL AB': 'A4', 'DIV AB': '84', 'SUBB A,#data': '94',
-    'MOV A,#data': '74', 'MOV A,R0': 'E8', 'MOV A,R1': 'E9',
+    'MUL AB': 'A4', 'DIV AB': '84', 'SUBB A,#05': '94',
+    'MOV A,#05': '74', 'MOV A,R0': 'E8', 'MOV A,R1': 'E9',
     'MOV A,R2': 'EA', 'MOV A,R3': 'EB', 'MOV A,R4': 'EC',
     'MOV A,R5': 'ED', 'MOV A,R6': 'EE', 'MOV A,R7': 'EF',
-    'MOV @R0,#data': '76', 'MOV @R1,#data': '77',
-    'MOV R0,#data': '78', 'MOV R1,#data': '79',
-    'MOV DPTR,#data': '90', 'MOVC A,@A+DPTR': '93',
+    'MOV @R0,#0A': '76', 'MOV @R1,#0A': '77',
+    'MOV R0,#0A': '78', 'MOV R1,#55': '79',
+    'MOV DPTR,#1234': '90', 'MOVC A,@A+DPTR': '93',
     'CLR A': 'E4', 'SWAP A': 'C4', 'INC DPTR': 'A3'
 }
 
@@ -45,7 +45,7 @@ asm_code = """\
 CLR A
 ADD A,R0
 MOV A,R1
-MOV @R0,#data
+MOV @R0,#0A
 """
 
 binary_output = assembler_to_binary(asm_code)
